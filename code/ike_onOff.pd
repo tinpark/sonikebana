@@ -1,0 +1,11 @@
+#N canvas 94 230 1056 708 10;
+#X obj 73 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 73 100 \; pd dsp \$1;
+#X msg 168 100 instance #1 \$1;
+#X obj 168 123 print;
+#X obj 226 49 inlet;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 0 0;
