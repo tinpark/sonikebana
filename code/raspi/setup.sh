@@ -16,6 +16,11 @@
 # this is a useful post for setting up the PI when you don't have a spare monitor to hand: https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0
 # other helful stuff: https://github.com/raspberrypi-ui/rc_gui/blob/master/src/rc_gui.c#L23-L70
 
+# This setup script is available on github, you can download it from here: https://github.com/tinpark/sonikebana/blob/master/code/raspi/setup.sh
+# To get the whole sonikebana repository and therefore, setup a PI with all the resources nescessary to make the project work on your own system, run this:
+# --------------------------------------
+# grab the github repository
+git clone https://github.com/tinpark/sonikebana.git
 #-----------------------------------
 # setup core arguments for setting the state of the system you wish to end up with
 rpiName=$1
@@ -92,13 +97,6 @@ sudo sed -i -e 's/console=serial0,115200//g' /boot/cmdline.txt
 
 # -------------------------------------
 # write the PI mac address to a text file and upload it somewhere
-
-# -------------------------------------
-# Download the latest sonikebana codebase
-# cd ~/Desktop
-# mkdir sonikebana
-# cd sonikebana
-# git clone https://github.com/tinpark/code.git
 
 #-------------------------------------
 # get the initialisation script from github, and pass initialisation arguments to the script so that it is hard-wired to start properly
