@@ -93,7 +93,15 @@ sudo systemctl disable serial-getty@ttyAMA0.service
 sudo sed -i -e 's/console=serial0,115200//g' /boot/cmdline.txt
 
 # ------------------------------------
-# set default soundcard to be the IQAudioDAC
+# set default soundcard to be the HiFiBerryAmp2
+# remove the default audio card settings
+sudo sed -i -e 's/dtparam=audio=on//g' /boot/config.txt
+
+# add the hifiberry audio card to the default set
+sudo echo 'dtoverlay=hifiberry-dacplus' >> /boot/config.txt
+
+# copy a config file across
+sudo mv sonikebana/code/raspi/asound.conf /etc/
 
 # -------------------------------------
 # write the PI mac address to a text file and upload it somewhere
@@ -101,7 +109,7 @@ sudo sed -i -e 's/console=serial0,115200//g' /boot/cmdline.txt
 #-------------------------------------
 # get the initialisation script from github, and pass initialisation arguments to the script so that it is hard-wired to start properly
 # add the line to the launch script ~/profile file so that it executes properly
-echo 'bash ~/sonikebana/code/raspi/sonikebanaLaunch.sh $bcastIP $bcastPort $rpiName' >> ~/profile
+sudo echo 'bash ~/sonikebana/code/raspi/sonikebanaLaunch.sh $bcastIP $bcastPort $rpiName' >> ~/.profile
 
 # -------------------------------------
 # Download and unzip the latest sonikebana assets library
