@@ -63,7 +63,7 @@ i2c-tools
 
 # ------------------------------------------------------------
 # Python OSC to enable OSC messages to pass between python and PD and beyond
-pip3 install python-osc
+sudo pip3 install python-osc
 
 # ----------------------------------
 # install bosch BNO055 library
@@ -96,12 +96,14 @@ sed -i -e 's/console=serial0,115200//g' /boot/cmdline.txt
 # -------------------------------------
 # Download the latest sonikebana codebase
 cd ~/Desktop
-git clone https://github.com/sonikebana/sonkebanaPerformanceCode.git
+mkdir sonikebana
+cd sonikebana
+git clone https://github.com/sonikebana/code.git
 
 #-------------------------------------
 # get the initialisation script from github, and pass initialisation arguments to the script so that it is hard-wired to start properly
 # add the line to the launch script ~/profile file so that it executes properly
-echo 'bash ~/Desktop/sonikebanaPerformanceCode/sonikebanaLaunch.sh $bcastIP $bcastPort $rpiName' >> ~/profile
+echo 'bash ~/Desktop/sonikebana/code/sonikebanaLaunch.sh $bcastIP $bcastPort $rpiName' >> ~/profile
 
 # -------------------------------------
 # Download and unzip the latest sonikebana assets library
