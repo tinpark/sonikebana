@@ -85,7 +85,7 @@ sudo systemctl disable serial-getty@ttyAMA0.service
 # ----------------------------------
 # remove this part of a line from /boot/cmdline.txt console=serial0,115200
 # todo
-sed -i -e 's/console=serial0,115200//g' /boot/cmdline.txt
+sudo sed -i -e 's/console=serial0,115200//g' /boot/cmdline.txt
 
 # ------------------------------------
 # set default soundcard to be the IQAudioDAC
@@ -95,15 +95,15 @@ sed -i -e 's/console=serial0,115200//g' /boot/cmdline.txt
 
 # -------------------------------------
 # Download the latest sonikebana codebase
-cd ~/Desktop
-mkdir sonikebana
-cd sonikebana
-git clone https://github.com/sonikebana/code.git
+# cd ~/Desktop
+# mkdir sonikebana
+# cd sonikebana
+# git clone https://github.com/tinpark/code.git
 
 #-------------------------------------
 # get the initialisation script from github, and pass initialisation arguments to the script so that it is hard-wired to start properly
 # add the line to the launch script ~/profile file so that it executes properly
-echo 'bash ~/Desktop/sonikebana/code/sonikebanaLaunch.sh $bcastIP $bcastPort $rpiName' >> ~/profile
+echo 'bash ~/sonikebana/code/raspi/sonikebanaLaunch.sh $bcastIP $bcastPort $rpiName' >> ~/profile
 
 # -------------------------------------
 # Download and unzip the latest sonikebana assets library
