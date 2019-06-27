@@ -19,8 +19,8 @@
 # This setup script is available on github, you can download it from here: https://github.com/tinpark/sonikebana/blob/master/code/raspi/setup.sh
 # To get the whole sonikebana repository and therefore, setup a PI with all the resources nescessary to make the project work on your own system, run this:
 # --------------------------------------
-# grab the github repository
-git clone https://github.com/tinpark/sonikebana.git
+# grab the github repository - this is commented out as I presume you've already done this in order to get this setup script.
+# git clone https://github.com/tinpark/sonikebana.git
 
 # setup the user name to enable you to push stuff to git later on
 git config --global user.email "mp@tinpark.com"
