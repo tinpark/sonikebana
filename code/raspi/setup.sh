@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #  setup.sh
-#  
+#
 #
 #  Created by PARKER Martin on 30/04/2019.
 #
@@ -21,6 +21,11 @@
 # --------------------------------------
 # grab the github repository
 git clone https://github.com/tinpark/sonikebana.git
+
+# setup the user name to enable you to push stuff to git later on
+git config --global user.email "mp@tinpark.com"
+git config --global user.name "tinpark"
+
 #-----------------------------------
 # setup core arguments for setting the state of the system you wish to end up with
 rpiName=$1
@@ -28,6 +33,11 @@ rpiPWD=$2
 bcastIP=$3
 bcastPort=$4
 
+# get Mac address and post it to github
+ifconfig > sonikebana/piData/$1.txt
+git add sonikebana/piData/$1.txt
+git commit -m "adding computer data"
+git push origin master
 # ----------------------------------
 # setup core systen settings
 sudo raspi-config nonint do_ssh 0 # turn on SSH
@@ -47,12 +57,26 @@ echo \"$SUDO_USER:$rpiPWD\" | chpasswd
 # install core system software that you're going to need
 sudo apt-get install \
     netatalk \
-    puredata \
     ffmpeg \
     sox \
     mpv \
     nodejs \
     npm \
+
+# ----------------
+# install the lastest PD instructions from: http://www.haigarmen.com/installing-the-latest-puredata-on-a-raspberry-pi/
+mkdir pdsrc
+cd pdsrc
+sudo apt install build-essential autoconf automake libtool gettext git libasound2-dev libjack-jackd2-dev libfftw3-3 libfftw3-dev tcl tk
+wget http://msp.ucsd.edu/Software/pd-0.49-0.src.tar.gz
+tar -xzf pd-0.49-0.src.tar.gz
+
+cd pd-0.49-0
+./autogen.sh
+./configure --enable-jack --enable-fftw
+make
+
+sudo make install
 
 # ----------------------------------
 # install GPIO stuff just in case
