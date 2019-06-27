@@ -122,8 +122,8 @@ sudo echo 'dtoverlay=iqaudio-dacplus' >> /boot/config.txt
 
 # -------------------------------------
 # write the PI mac address to a text file and upload it somewhere
-ifconfig > sonikebana/piData/$1.txt
-git add sonikebana/piData/$1.txt
+ifconfig > sonikebana/piData/$rpiName.txt
+git add sonikebana/piData/$rpiName.txt
 git commit -m "adding computer data"
 git push origin master
 
@@ -134,11 +134,6 @@ sudo echo 'bash ~/sonikebana/code/raspi/sonikebanaLaunch.sh $bcastIP $bcastPort 
 
 # -------------------------------------
 # Download and unzip the latest sonikebana assets library
-# cd ~/Desktop/performanceCode
-# lookslike I need wget for dropbox curl https://www.dropbox.com/s/g2kd6fzvdh3o9ct/assets.zip?dl=1
-# unzip assets.zip
-# rm assets.zip
-
 curl -L https://www.dropbox.com/sh/kx25ck58qkgg04w/AACbMp4nF8VnTctwn9K_g6-7a?dl=1 > sonikebanaSound.zip
 unzip sonikebanaSound.zip
 rm sonikebanaSound.zip
