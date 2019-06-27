@@ -1,0 +1,28 @@
+#N canvas 108 200 686 246 10;
+#X obj 6 143 soundfiler;
+#X obj 6 4 inlet soundFileName;
+#X msg 6 120 read -resize \$1 \$2;
+#X obj 6 167 v \$1-size;
+#X obj 5 191 array define \$1;
+#X obj 189 71 symbol \$1;
+#X obj 6 47 t s b, f 31;
+#X obj 6 95 pack s s, f 31;
+#X obj 6 25 symbol;
+#X obj 6 72 list trim;
+#X text 225 164 ike_core_soundDef - drop in a soundfile name to the
+inlet and it will load it into an array for you \, setting the size
+of the array to a v object called "argName-size). Give the object a
+unique argument so that its array is always unique;
+#X obj 106 192 outlet loadSuccess;
+#X obj 106 171 t b;
+#X connect 0 0 3 0;
+#X connect 0 1 12 0;
+#X connect 1 0 8 0;
+#X connect 2 0 0 0;
+#X connect 5 0 7 1;
+#X connect 6 0 9 0;
+#X connect 6 1 5 0;
+#X connect 7 0 2 0;
+#X connect 8 0 6 0;
+#X connect 9 0 7 0;
+#X connect 12 0 11 0;

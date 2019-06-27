@@ -1,0 +1,71 @@
+{
+	"pattrstorage" : 	{
+		"name" : "speakerSettings",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"name" : "defaultStates",
+				"data" : 				{
+					"ikebanaMasterControl::hostIP" : [ "192.168.1.255" ],
+					"ikebanaMasterControl::lowestFrequency" : [ 37.0 ],
+					"ikebanaMasterControl::portNum" : [ 2341 ],
+					"ikebanaMasterControl::voiceGain" : [ 84.0 ],
+					"ikebanaMasterControl::voiceHighPassFrequency" : [ 1868.0 ],
+					"ikebanaMasterControl::voiceLowPassFreq" : [ 1868.0 ],
+					"ikebanaMasterControl[1]::hostIP" : [ "192.168.1.255" ],
+					"ikebanaMasterControl[1]::lowestFrequency" : [ 37.0 ],
+					"ikebanaMasterControl[1]::portNum" : [ 2342 ],
+					"ikebanaMasterControl[1]::voiceGain" : [ 84.0 ],
+					"ikebanaMasterControl[1]::voiceHighPassFrequency" : [ 1868.0 ],
+					"ikebanaMasterControl[1]::voiceLowPassFreq" : [ 1868.0 ],
+					"ikebanaMasterControl[2]::hostIP" : [ "192.168.1.255" ],
+					"ikebanaMasterControl[2]::lowestFrequency" : [ 37.0 ],
+					"ikebanaMasterControl[2]::portNum" : [ 2343 ],
+					"ikebanaMasterControl[2]::voiceGain" : [ 84.0 ],
+					"ikebanaMasterControl[2]::voiceHighPassFrequency" : [ 1868.0 ],
+					"ikebanaMasterControl[2]::voiceLowPassFreq" : [ 1868.0 ],
+					"ikebanaMasterControl[5]::hostIP" : [ "192.168.1.255" ],
+					"ikebanaMasterControl[5]::lowestFrequency" : [ 37.0 ],
+					"ikebanaMasterControl[5]::portNum" : [ 2344 ],
+					"ikebanaMasterControl[5]::voiceGain" : [ 84.0 ],
+					"ikebanaMasterControl[5]::voiceHighPassFrequency" : [ 1868.0 ],
+					"ikebanaMasterControl[5]::voiceLowPassFreq" : [ 1868.0 ],
+					"ikebanaMasterControl[4]::hostIP" : [ "192.168.1.255" ],
+					"ikebanaMasterControl[4]::lowestFrequency" : [ 37.0 ],
+					"ikebanaMasterControl[4]::portNum" : [ 2345 ],
+					"ikebanaMasterControl[4]::voiceGain" : [ 84.0 ],
+					"ikebanaMasterControl[4]::voiceHighPassFrequency" : [ 1868.0 ],
+					"ikebanaMasterControl[4]::voiceLowPassFreq" : [ 1868.0 ],
+					"ikebanaMasterControl[3]::hostIP" : [ "192.168.1.255" ],
+					"ikebanaMasterControl[3]::lowestFrequency" : [ 37.0 ],
+					"ikebanaMasterControl[3]::portNum" : [ 2346 ],
+					"ikebanaMasterControl[3]::voiceGain" : [ 84.0 ],
+					"ikebanaMasterControl[3]::voiceHighPassFrequency" : [ 1868.0 ],
+					"ikebanaMasterControl[3]::voiceLowPassFreq" : [ 1868.0 ],
+					"ikebanaMasterControl[8]::hostIP" : [ "192.168.1.255" ],
+					"ikebanaMasterControl[8]::lowestFrequency" : [ 37.0 ],
+					"ikebanaMasterControl[8]::portNum" : [ 2347 ],
+					"ikebanaMasterControl[8]::voiceGain" : [ 84.0 ],
+					"ikebanaMasterControl[8]::voiceHighPassFrequency" : [ 1868.0 ],
+					"ikebanaMasterControl[8]::voiceLowPassFreq" : [ 1868.0 ],
+					"ikebanaMasterControl[7]::hostIP" : [ "192.168.1.255" ],
+					"ikebanaMasterControl[7]::lowestFrequency" : [ 37.0 ],
+					"ikebanaMasterControl[7]::portNum" : [ 2348 ],
+					"ikebanaMasterControl[7]::voiceGain" : [ 84.0 ],
+					"ikebanaMasterControl[7]::voiceHighPassFrequency" : [ 1868.0 ],
+					"ikebanaMasterControl[7]::voiceLowPassFreq" : [ 1868.0 ],
+					"ikebanaMasterControl[6]::hostIP" : [ "192.168.1.255" ],
+					"ikebanaMasterControl[6]::lowestFrequency" : [ 37.0 ],
+					"ikebanaMasterControl[6]::portNum" : [ 2349 ],
+					"ikebanaMasterControl[6]::voiceGain" : [ 84.0 ],
+					"ikebanaMasterControl[6]::voiceHighPassFrequency" : [ 1868.0 ],
+					"ikebanaMasterControl[6]::voiceLowPassFreq" : [ 1868.0 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}
