@@ -33,11 +33,6 @@ rpiPWD=$2
 bcastIP=$3
 bcastPort=$4
 
-# get Mac address and post it to github
-ifconfig > sonikebana/piData/$1.txt
-git add sonikebana/piData/$1.txt
-git commit -m "adding computer data"
-git push origin master
 # ----------------------------------
 # setup core systen settings
 sudo raspi-config nonint do_ssh 0 # turn on SSH
@@ -117,18 +112,20 @@ sudo systemctl disable serial-getty@ttyAMA0.service
 sudo sed -i -e 's/console=serial0,115200//g' /boot/cmdline.txt
 
 # ------------------------------------
-# set default soundcard to be the HiFiBerryAmp2
+# set default soundcard to be the IQaudioAmp
 # remove the default audio card settings
 sudo sed -i -e 's/dtparam=audio=on//g' /boot/config.txt
 
-# add the hifiberry audio card to the default set
-sudo echo 'dtoverlay=hifiberry-dacplus' >> /boot/config.txt
+# add the IQaudio audio card to the default set
+sudo echo 'dtoverlay=iqaudio-dacplus' >> /boot/config.txt
 
-# copy a config file across
-sudo mv sonikebana/code/raspi/asound.conf /etc/
 
 # -------------------------------------
 # write the PI mac address to a text file and upload it somewhere
+ifconfig > sonikebana/piData/$1.txt
+git add sonikebana/piData/$1.txt
+git commit -m "adding computer data"
+git push origin master
 
 #-------------------------------------
 # get the initialisation script from github, and pass initialisation arguments to the script so that it is hard-wired to start properly
@@ -141,6 +138,10 @@ sudo echo 'bash ~/sonikebana/code/raspi/sonikebanaLaunch.sh $bcastIP $bcastPort 
 # lookslike I need wget for dropbox curl https://www.dropbox.com/s/g2kd6fzvdh3o9ct/assets.zip?dl=1
 # unzip assets.zip
 # rm assets.zip
+
+curl -L https://www.dropbox.com/sh/kx25ck58qkgg04w/AACbMp4nF8VnTctwn9K_g6-7a?dl=1 > sonikebanaSound.zip
+unzip sonikebanaSound.zip
+rm sonikebanaSound.zip
 
 
 # ------------------------------------
