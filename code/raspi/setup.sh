@@ -30,8 +30,8 @@ git config --global user.name "tinpark"
 # setup core arguments for setting the state of the system you wish to end up with
 rpiName=$1
 rpiPWD=$2
-bcastIP=$3
-bcastPort=$4
+bcastIP=$3 #the IP address you wish to send the sensor data to
+bcastPort=$4 #the PORT number you wish to send the sensor data to
 
 # ----------------------------------
 # setup core systen settings
@@ -59,7 +59,7 @@ sudo apt-get install \
     npm \
 
 # ----------------
-# install the lastest PD instructions from: http://www.haigarmen.com/installing-the-latest-puredata-on-a-raspberry-pi/
+# install the lastest PD (4.9.0) instructions from: http://www.haigarmen.com/installing-the-latest-puredata-on-a-raspberry-pi/
 mkdir pdsrc
 cd pdsrc
 sudo apt install build-essential autoconf automake libtool gettext git libasound2-dev libjack-jackd2-dev libfftw3-3 libfftw3-dev tcl tk
@@ -88,18 +88,24 @@ i2c-tools
 # ------------------------------------------------------------
 # Python OSC to enable OSC messages to pass between python and PD and beyond
 sudo pip3 install python-osc
+sudo pip install python-osc
 
 # ----------------------------------
 # install bosch BNO055 library
 # git clone https://github.com/adafruit/Adafruit_Python_BNO055
 # cd Adafruit_Python_BNO055
 # sudo pip setup.py install
-sudo pip3 install Adafruit-BNO055
+# sudo pip3 install Adafruit-BNO055
+git clone https://github.com/adafruit/Adafruit_Python_BNO055
+cd Adafruit_Python_BNO055
+sudo python setup.py install
+cd ..
 
 # ------------------------------------------------------------
 # install adafruit compass LSM303 as a backup library for the LSM303 in case the BNO055 fails and you're in a hurry to get another sensor in
 # lsm303
-sudo pip3 install Adafruit-lsm303
+# actually, we don't need this, so let's not install it
+# sudo pip3 install Adafruit-lsm303
 
 # ----------------------------------
 # sort out UART stuff for the BNO055 sensor
@@ -134,8 +140,8 @@ sudo echo 'bash ~/sonikebana/code/raspi/sonikebanaLaunch.sh $bcastIP $bcastPort 
 
 # -------------------------------------
 # Download and unzip the latest sonikebana assets library
-curl -L https://www.dropbox.com/sh/kx25ck58qkgg04w/AACbMp4nF8VnTctwn9K_g6-7a?dl=1 > sonikebanaSound.zip
-unzip sonikebanaSound.zip
+curl -L https://www.dropbox.com/sh/kx25ck58qkgg04w/AACbMp4nF8VnTctwn9K_g6-7a?dl=1 > ~/Desktop/sonikebanaSound.zip
+unzip ~/Desktop/sonikebanaSound.zip
 rm sonikebanaSound.zip
 
 
