@@ -20,10 +20,10 @@ pt=$2
 piName=$3
 
 # wait 15 seconds, launch python script to detect sensor and start spewing numbers across the network
-(sleep 15 && python3 ~/sonikebana/code/python/boschTest.py --ip $ip --port $pt) &
+(sleep 15 && python3 ~/sonikebana/code/python/sensorConnect.py --ip 127.0.0.1 --port 8000) &
 
 # wait 5 more seconds and launch the pure data application with nogui and send an initialisation messate
-(sleep 5 && pd -open ~/sonikebana/code/pd/ike_topLevel.pd -path ~/sonikebana/assets -send "stats $piName $ip $pt" -r 48000) &
+(sleep 5 && pd -open ~/sonikebana/code/pd/ike_topLevel.pd -path ~/Desktop/sonikebanaSound -send "stats $piName 192.168.1.255 5678" -r 48000) &
 exit 0
 
 # https://puredata.info/docs/faq/commandline
