@@ -28,7 +28,7 @@
 #X floatatom 92 72 5 0 0 0 - - -;
 #X obj 432 643 outlet~ barRamp;
 #X obj 550 640 outlet~ segmentRamp;
-#X obj 665 464 *~ 510;
+#X obj 665 464 *~ 511;
 #X connect 0 0 12 0;
 #X connect 0 0 13 1;
 #X connect 1 0 0 0;

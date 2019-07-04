@@ -50,93 +50,29 @@ echo \"$SUDO_USER:$rpiPWD\" | chpasswd
 
 # ----------------------------------
 # install core system software that you're going to need
-sudo apt-get install \
-    netatalk \
-    ffmpeg \
-    sox \
-    mpv \
-    nodejs \
-    npm \
-
+bash systemCore.sh
 # ----------------
 # install the lastest PD (4.9.0) instructions from: http://www.haigarmen.com/installing-the-latest-puredata-on-a-raspberry-pi/
-mkdir pdsrc
-cd pdsrc
-sudo apt install build-essential autoconf automake libtool gettext git libasound2-dev libjack-jackd2-dev libfftw3-3 libfftw3-dev tcl tk
-wget http://msp.ucsd.edu/Software/pd-0.49-0.src.tar.gz
-tar -xzf pd-0.49-0.src.tar.gz
+bash makePD.sh
 
-cd pd-0.49-0
-./autogen.sh
-./configure --enable-jack --enable-fftw
-make
-
-sudo make install
-
-# ----------------------------------
-# install GPIO stuff just in case
-sudo apt-get install -y \
-python-rpi.gpio \
-python3-rpi.gpio
-
-# ------------------------------------------------------------
-# I2C again, just in case we need it
-sudo apt-get install -y \
-python-smbus \
-i2c-tools
-
-# ------------------------------------------------------------
-# Python OSC to enable OSC messages to pass between python and PD and beyond
-sudo pip3 install python-osc
-sudo pip install python-osc
-
-# ----------------------------------
-# install bosch BNO055 library
-# git clone https://github.com/adafruit/Adafruit_Python_BNO055
-# cd Adafruit_Python_BNO055
-# sudo pip setup.py install
-# sudo pip3 install Adafruit-BNO055
-git clone https://github.com/adafruit/Adafruit_Python_BNO055
-cd Adafruit_Python_BNO055
-sudo python setup.py install
-cd ..
-
-# ------------------------------------------------------------
-# install adafruit compass LSM303 as a backup library for the LSM303 in case the BNO055 fails and you're in a hurry to get another sensor in
-# lsm303
-# actually, we don't need this, so let's not install it
-# sudo pip3 install Adafruit-lsm303
-
-# ----------------------------------
-# sort out UART stuff for the BNO055 sensor
-sudo enable_uart=1 /boot/config.txt
-sudo systemctl stop serial-getty@ttyAMA0.service
-sudo systemctl disable serial-getty@ttyAMA0.service
-# ----------------------------------
-# remove this part of a line from /boot/cmdline.txt console=serial0,115200
-# todo
-sudo sed -i -e 's/console=serial0,115200//g' /boot/cmdline.txt
-
-# ------------------------------------
-# set default soundcard to be the IQaudioAmp
-# remove the default audio card settings
-sudo sed -i -e 's/dtparam=audio=on//g' /boot/config.txt
-
-# add the IQaudio audio card to the default set
-sudo echo 'dtoverlay=iqaudio-dacplus' >> /boot/config.txt
-
+# ----------------
+# setup sensor
+bash sensorSetup.sh
 
 # -------------------------------------
 # write the PI mac address to a text file and upload it somewhere
-ifconfig > sonikebana/piData/$rpiName.txt
-git add sonikebana/piData/$rpiName.txt
+ifconfig > ~/sonikebana/piData/$rpiName.txt
+git add ~/sonikebana/piData/$rpiName.txt
 git commit -m "adding computer data"
 git push origin master
 
+# -------------------------------
+# disable bluetooth, not sure
+# https://scribles.net/disabling-bluetooth-on-raspberry-pi/
 #-------------------------------------
-# get the initialisation script from github, and pass initialisation arguments to the script so that it is hard-wired to start properly
+# pass arguments to the launch script so that the pi launches correctly.
 # add the line to the launch script ~/profile file so that it executes properly
-sudo echo 'bash ~/sonikebana/code/raspi/sonikebanaLaunch.sh $bcastIP $bcastPort $rpiName' >> ~/.profile
+sudo echo "bash ~/sonikebana/code/raspi/sonikebanaLaunch.sh $bcastIP $bcastPort $rpiName" >> ~/.profile
 
 # -------------------------------------
 # Download and unzip the latest sonikebana assets library

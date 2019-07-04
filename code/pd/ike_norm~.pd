@@ -1,0 +1,16 @@
+#N canvas 0 23 450 300 10;
+#X obj 93 104 /~;
+#X obj 93 59 sig~ 1;
+#X obj 93 183 *~, f 13;
+#X obj 93 157 clip~ 0 1;
+#X obj 171 58 inlet~;
+#X obj 93 212 outlet~;
+#X obj 93 130 abs~;
+#X text 285 143 normalize recieved signals aka brinkmann;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 1;
+#X connect 4 0 2 1;
+#X connect 6 0 3 0;

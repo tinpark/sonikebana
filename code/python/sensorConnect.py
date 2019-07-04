@@ -23,7 +23,6 @@
 # THE SOFTWARE.
 import logging
 import sys
-
 import time
 import argparse
 import Adafruit_BNO055
@@ -55,14 +54,22 @@ OSC_ADDR = "/compass"
 # Create and configure the BNO sensor connection.  Make sure only ONE of the
 # below 'bno = ...' lines is uncommented:
 # Raspberry Pi configuration with serial UART and RST connected to GPIO 17:
-bno = BNO055.BNO055(serial_port='/dev/ttyS0', rst=17)
+bno = BNO055.BNO055(serial_port='/dev/serial0', rst=17)
 
-# Initialize the BNO055 and stop if something went wrong.
-if not bno.begin():
-    raise RuntimeError('Failed to initialize BNO055! Is the sensor connected?')
+# Initialize the BNO055 and try again if something went wrong:
+while True:
+    try:
+        # Initialize the BNO055 and stop if something went wrong.
+        if not bno.begin():
+            raise RuntimeError('Failed to initialize BNO055! Is the sensor connected?')
+        # Print system status and self test result.
+        status, self_test, error = bno.get_system_status()
+        break
+    except Exception as e:
+        print("Got error: {}".format(e))
+        print("Sleeping 1s before retrying")
+        time.sleep(1)
 
-# Print system status and self test result.
-status, self_test, error = bno.get_system_status()
 print('System status: {0}'.format(status))
 print('Self test result (0x0F is normal): 0x{0:02X}'.format(self_test))
 # Print out an error if system status is in error mode.
@@ -82,33 +89,40 @@ print('Magnetometer ID:    0x{0:02X}'.format(mag))
 print('Gyroscope ID:       0x{0:02X}\n'.format(gyro))
 print('Reading BNO055 data, press Ctrl-C to quit...')
 
-def send_readings_to_pd(heading, roll, pitch, x_acc, y_acc, z_acc):
+def send_readings_to_pd(heading, roll, pitch, x_acc, y_acc, z_acc, sys, gyro, accel, mag, temp_c):
     """ Sends BNO055 readings to PD
-        
-        In the order heading, roll, pitch, x_acc, y_acc, z_acc
+
+        In the order heading, roll, pitch, x_acc, y_acc, z_acc, sys, gyro, accel, mag, temp_c
         """
     msg = osc_message_builder.OscMessageBuilder(address=OSC_ADDR)
-    
+
     msg.add_arg(heading, arg_type="f")
     msg.add_arg(roll, arg_type="f")
     msg.add_arg(pitch, arg_type="f")
     msg.add_arg(x_acc, arg_type="f")
     msg.add_arg(y_acc, arg_type="f")
     msg.add_arg(z_acc, arg_type="f")
+    msg.add_arg(sys, arg_type="f")
+    msg.add_arg(gyro, arg_type="f")
+    msg.add_arg(accel, arg_type="f")
+    msg.add_arg(mag, arg_type="f")
+    msg.add_arg(temp_c, arg_type="f")
     client.send_message(OSC_ADDR, msg.build())
 
 while True:
     heading, roll, pitch = bno.read_euler()
-    x_acc,y_acc,z_acc = bno.read_linear_acceleration()
-    send_readings_to_pd(heading, roll, pitch, x_acc, y_acc, z_acc)
-    
+    x_acc, y_acc, z_acc = bno.read_linear_acceleration()
+    sys, gyro, accel, mag = bno.get_calibration_status()
+    temp_c = bno.read_temp()
+    send_readings_to_pd(heading, roll, pitch, x_acc, y_acc, z_acc, sys, gyro, accel, mag, temp_c)
+
     # Wait .075 seconds and repeat.
     time.sleep(0.075)
 
 
 #while True:
 #    # Read the Euler angles for heading, roll, pitch (all in degrees).
-#    
+#
 #    # Read the calibration status, 0=uncalibrated and 3=fully calibrated.
 #    sys, gyro, accel, mag = bno.get_calibration_status()
 #    # Other values you can optionally read:
