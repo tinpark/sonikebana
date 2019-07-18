@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #  sonikebanaLaunch.sh
-#  
 #
-#  Created by PARKER Martin on 03/04/2018.
+#
+#  Created by PARKER Martin on 18/07/2019.
 #
 
 # send the piname to the pd launchscript
@@ -20,7 +20,7 @@ pt=$2
 piName=$3
 
 # wait 15 seconds, launch python script to detect sensor and start spewing numbers across the network
-(sleep 15 && python3 ~/sonikebana/code/python/boschTest.py --ip $ip --port $pt) &
+(sleep 15 && python3 ~/sonikebana/code/python/sensorConnect.py --ip $ip --port $pt) &
 
 # wait 5 more seconds and launch the pure data application with nogui and send an initialisation messate
 (sleep 5 && pd -open ~/sonikebana/code/pd/ike_topLevel.pd -path ~/sonikebana/assets -send "stats $piName $ip $pt" -r 48000) &

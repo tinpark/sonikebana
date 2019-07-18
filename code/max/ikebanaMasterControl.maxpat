@@ -2,14 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
+			"major" : 8,
+			"minor" : 0,
 			"revision" : 5,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1852.0, 886.0 ],
+		"classnamespace" : "box",
+		"rect" : [ 34.0, 79.0, 1520.0, 886.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,8 +46,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1651.0, 320.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 856.0, 28.0, 135.0, 22.0 ],
-					"style" : ""
+					"presentation_rect" : [ 856.0, 28.0, 135.0, 22.0 ]
 				}
 
 			}
@@ -58,7 +58,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1487.0, 333.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -79,8 +78,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1487.0, 367.0, 57.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 795.0, 27.0, 57.0, 23.0 ],
-					"style" : ""
+					"presentation_rect" : [ 795.0, 27.0, 57.0, 23.0 ]
 				}
 
 			}
@@ -92,7 +90,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1299.0, 333.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -113,8 +110,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1299.0, 367.0, 57.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 736.0, 27.0, 57.0, 23.0 ],
-					"style" : ""
+					"presentation_rect" : [ 736.0, 27.0, 57.0, 23.0 ]
 				}
 
 			}
@@ -126,7 +122,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1190.0, 333.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -147,8 +142,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1190.0, 367.0, 57.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 677.0, 27.0, 57.0, 23.0 ],
-					"style" : ""
+					"presentation_rect" : [ 677.0, 27.0, 57.0, 23.0 ]
 				}
 
 			}
@@ -160,7 +154,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1076.0, 333.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -181,8 +174,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1076.0, 367.0, 57.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 618.0, 27.0, 57.0, 23.0 ],
-					"style" : ""
+					"presentation_rect" : [ 618.0, 27.0, 57.0, 23.0 ]
 				}
 
 			}
@@ -194,7 +186,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 940.0, 333.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -215,8 +206,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 940.0, 367.0, 57.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 559.0, 27.0, 57.0, 23.0 ],
-					"style" : ""
+					"presentation_rect" : [ 559.0, 27.0, 57.0, 23.0 ]
 				}
 
 			}
@@ -228,7 +218,6 @@
 					"numoutlets" : 7,
 					"outlettype" : [ "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 675.0, 218.0, 290.0, 22.0 ],
-					"style" : "",
 					"text" : "route masterGain lowPass highPass LFfilter on state"
 				}
 
@@ -241,7 +230,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 660.0, 75.0, 56.0, 22.0 ],
-					"style" : "",
 					"text" : "deferlow"
 				}
 
@@ -254,7 +242,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 306.0, 549.0, 56.0, 22.0 ],
-					"style" : "",
 					"text" : "deferlow"
 				}
 
@@ -263,13 +250,12 @@
 				"box" : 				{
 					"comment" : "turnAllOn",
 					"id" : "obj-8",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 675.0, 176.0, 30.0, 30.0 ],
-					"style" : ""
+					"patching_rect" : [ 675.0, 176.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -282,7 +268,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 76.0, 413.0, 113.0, 49.0 ],
-					"style" : "",
 					"text" : "ike_parseSpeakerNum #1 masterGain"
 				}
 
@@ -296,7 +281,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 927.0, 420.0, 84.0, 49.0 ],
-					"style" : "",
 					"text" : "ike_parseSpeakerNum #1 fetch"
 				}
 
@@ -310,7 +294,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 796.0, 420.0, 98.0, 49.0 ],
-					"style" : "",
 					"text" : "ike_parseSpeakerNum #1 heading"
 				}
 
@@ -324,7 +307,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 218.0, 413.0, 85.0, 49.0 ],
-					"style" : "",
 					"text" : "ike_parseSpeakerNum #1 lowPass"
 				}
 
@@ -338,7 +320,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 652.0, 420.0, 98.0, 35.0 ],
-					"style" : "",
 					"text" : "ike_parseSpeakerNum #1 on"
 				}
 
@@ -352,7 +333,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 365.0, 413.0, 84.0, 49.0 ],
-					"style" : "",
 					"text" : "ike_parseSpeakerNum #1 highPass"
 				}
 
@@ -365,7 +345,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 403.0, 200.0, 149.0, 22.0 ],
-					"style" : "",
 					"text" : "combine / #1 @triggers 1"
 				}
 
@@ -379,7 +358,6 @@
 					"patching_rect" : [ 255.0, 3.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 174.0, 3.0, 25.0, 20.0 ],
-					"style" : "",
 					"text" : "dB",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -394,7 +372,6 @@
 					"patching_rect" : [ 715.0, 3.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 565.0, 4.0, 69.0, 20.0 ],
-					"style" : "",
 					"text" : "MinFreqHz",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -409,7 +386,6 @@
 					"patching_rect" : [ 563.0, 3.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 433.0, 3.0, 61.0, 20.0 ],
-					"style" : "",
 					"text" : "hiPassHz",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -423,8 +399,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 407.0, 3.0, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 279.472473, 3.0, 70.0, 20.0 ],
-					"style" : "",
+					"presentation_rect" : [ 279.472472999999979, 3.0, 70.0, 20.0 ],
 					"text" : "lowPassHz",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -438,7 +413,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 573.0, 610.0, 79.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend port"
 				}
 
@@ -451,7 +425,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 573.0, 582.0, 61.0, 22.0 ],
-					"style" : "",
 					"text" : "route text"
 				}
 
@@ -471,8 +444,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 920.0, 2.0, 71.0, 23.0 ],
 					"rounded" : 0.0,
-					"style" : "",
-					"text" : "2346",
+					"text" : "2341",
 					"varname" : "portNum"
 				}
 
@@ -485,7 +457,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 459.0, 610.0, 81.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend host"
 				}
 
@@ -498,7 +469,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 459.0, 582.0, 61.0, 22.0 ],
-					"style" : "",
 					"text" : "route text"
 				}
 
@@ -518,8 +488,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 806.0, 2.0, 112.0, 23.0 ],
 					"rounded" : 0.0,
-					"style" : "",
-					"text" : "localhost",
+					"text" : "192.168.1.255",
 					"varname" : "hostIP"
 				}
 
@@ -536,8 +505,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 927.0, 381.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 645.495422, 2.0, 160.0, 23.0 ],
-					"style" : "",
+					"presentation_rect" : [ 645.495421999999962, 2.0, 160.0, 23.0 ],
 					"text" : "fetch state from speaker"
 				}
 
@@ -550,7 +518,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 76.0, 245.0, 346.0, 22.0 ],
-					"style" : "",
 					"text" : "route /#1"
 				}
 
@@ -563,7 +530,6 @@
 					"numoutlets" : 13,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 76.0, 292.0, 1723.0, 22.0 ],
-					"style" : "",
 					"text" : "route masterGain lowPass highPass LFfilter on heading pitch roll xacc yacc zacc cal"
 				}
 
@@ -576,7 +542,6 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "OSCTimeTag" ],
 					"patching_rect" : [ 29.0, 200.0, 113.0, 22.0 ],
-					"style" : "",
 					"text" : "OpenSoundControl"
 				}
 
@@ -589,7 +554,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 29.0, 167.0, 144.0, 22.0 ],
-					"style" : "",
 					"text" : "udpreceive 2345 CNMAT"
 				}
 
@@ -602,7 +566,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 796.0, 349.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -615,7 +578,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 652.0, 346.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -628,7 +590,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 508.0, 346.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -641,7 +602,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 365.0, 346.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -654,7 +614,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 218.0, 346.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -667,7 +626,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 76.0, 346.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -681,7 +639,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 508.0, 413.0, 84.0, 49.0 ],
-					"style" : "",
 					"text" : "ike_parseSpeakerNum #1 LFfilter"
 				}
 
@@ -701,7 +658,6 @@
 					"patching_rect" : [ 508.0, 376.0, 142.0, 23.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 500.0, 2.0, 142.0, 23.0 ],
-					"style" : "",
 					"varname" : "lowestFrequency"
 				}
 
@@ -722,8 +678,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 796.0, 383.0, 57.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 500.0, 27.0, 57.0, 23.0 ],
-					"style" : ""
+					"presentation_rect" : [ 500.0, 27.0, 57.0, 23.0 ]
 				}
 
 			}
@@ -735,7 +690,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 76.0, 525.0, 33.0, 22.0 ],
-					"style" : "",
 					"text" : "t b s"
 				}
 
@@ -747,7 +701,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 76.0, 648.0, 182.0, 22.0 ],
-					"style" : "",
 					"text" : "udpsend localhost 2346 CNMAT"
 				}
 
@@ -760,7 +713,6 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "OSCTimeTag" ],
 					"patching_rect" : [ 76.0, 612.0, 143.0, 22.0 ],
-					"style" : "",
 					"text" : "OpenSoundControl 2000"
 				}
 
@@ -778,7 +730,6 @@
 					"patching_rect" : [ 652.0, 376.0, 57.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 44.0, 2.0, 57.0, 23.0 ],
-					"style" : "",
 					"text" : "off",
 					"texton" : "ON"
 				}
@@ -792,7 +743,6 @@
 					"numoutlets" : 14,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 29.0, 52.0, 155.5, 22.0 ],
-					"style" : "",
 					"text" : "t s s s s s s s s s s s s s s"
 				}
 
@@ -806,17 +756,16 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 117.0, 15.0, 113.0, 22.0 ],
 					"restore" : 					{
-						"hostIP" : [ "localhost" ],
+						"hostIP" : [ "192.168.1.255" ],
 						"lowestFrequency" : [ 37.0 ],
-						"portNum" : [ 2346 ],
-						"voiceGain" : [ 28.0 ],
+						"portNum" : [ 2341 ],
+						"voiceGain" : [ 118.0 ],
 						"voiceHighPassFrequency" : [ 1868.0 ],
 						"voiceLowPassFreq" : [ 1868.0 ]
 					}
 ,
-					"style" : "",
 					"text" : "autopattr",
-					"varname" : "u686003672"
+					"varname" : "u925001133"
 				}
 
 			}
@@ -828,7 +777,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 29.0, 99.0, 74.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -841,7 +789,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 29.0, 15.0, 83.0, 22.0 ],
-					"style" : "",
 					"text" : "loadmess #1"
 				}
 
@@ -857,8 +804,7 @@
 					"patching_rect" : [ 29.0, 132.0, 160.0, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 2.0, 3.0, 40.0, 21.0 ],
-					"style" : "",
-					"text" : "#1"
+					"text" : "one"
 				}
 
 			}
@@ -878,8 +824,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 365.0, 376.0, 146.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 351.472473, 2.0, 146.0, 23.0 ],
-					"style" : "",
+					"presentation_rect" : [ 351.472472999999979, 2.0, 146.0, 23.0 ],
 					"varname" : "voiceHighPassFrequency"
 				}
 
@@ -901,7 +846,6 @@
 					"patching_rect" : [ 218.0, 376.0, 146.0, 23.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 203.0, 2.0, 146.0, 23.0 ],
-					"style" : "",
 					"varname" : "voiceLowPassFreq"
 				}
 
@@ -914,7 +858,7 @@
 					"hint" : "voiceGain 0-100dB",
 					"id" : "obj-2",
 					"maxclass" : "flonum",
-					"maximum" : 100.0,
+					"maximum" : 118.0,
 					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -922,8 +866,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 76.0, 384.0, 99.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 102.830276, 2.0, 99.0, 23.0 ],
-					"style" : "",
+					"presentation_rect" : [ 102.830275999999998, 2.0, 99.0, 23.0 ],
 					"varname" : "voiceGain"
 				}
 
@@ -932,16 +875,15 @@
 				"box" : 				{
 					"background" : 1,
 					"id" : "obj-15",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 275.0, 585.0, 50.0, 35.0 ],
+					"patching_rect" : [ 275.0, 585.0, 50.0, 49.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 279.472473, 27.0, 218.0, 22.0 ],
-					"style" : "",
-					"text" : "/#1/LFfilter 37."
+					"presentation_rect" : [ 279.472472999999979, 27.0, 218.0, 22.0 ],
+					"text" : "/one/masterGain 118."
 				}
 
 			}
@@ -955,9 +897,9 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 286.0, 120.0, 393.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 44.0, 27.0, 234.472473, 22.0 ],
-					"style" : "",
-					"text" : "/one heading 359.9375"
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 44.0, 27.0, 234.472473000000008, 35.0 ],
+					"text" : "/testBuild 19.0625 -2.375 176.5625 -0.11 0.04 0.01 0. 3. 3. 2. 23."
 				}
 
 			}
@@ -1442,20 +1384,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "ike_parseSpeakerNum.maxpat",
-				"bootpath" : "~/Dropbox/pieces/sonikebana/code/max",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "OpenSoundControl.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

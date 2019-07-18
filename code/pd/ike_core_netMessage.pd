@@ -1,0 +1,12 @@
+#N canvas 0 23 239 210 10;
+#X obj 20 57 f, f 12;
+#X obj 20 77 change;
+#X obj 20 31 inlet bang;
+#X obj 91 31 inlet value;
+#X obj 19 125 outlet paramValue;
+#X obj 20 98 list prepend \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 5 0 4 0;

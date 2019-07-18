@@ -72,7 +72,8 @@ git push origin master
 #-------------------------------------
 # pass arguments to the launch script so that the pi launches correctly.
 # add the line to the launch script ~/profile file so that it executes properly
-sudo echo "bash ~/sonikebana/code/raspi/sonikebanaLaunch.sh $bcastIP $bcastPort $rpiName" >> ~/.profile
+
+# sudo echo "bash ~/sonikebana/code/raspi/sonikebanaLaunch.sh $bcastIP $bcastPort $rpiName" >> ~/.profile
 
 # -------------------------------------
 # Download and unzip the latest sonikebana assets library

@@ -1,0 +1,19 @@
+{
+	"pattrstorage" : 	{
+		"name" : "testTonePreset",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"name" : "default",
+				"data" : 				{
+					"nPartsPerClick" : [ 26 ],
+					"soundPlayerFadeTime" : [ -20.0 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

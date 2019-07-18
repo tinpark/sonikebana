@@ -1,0 +1,129 @@
+{
+	"pattrstorage" : 	{
+		"name" : "soundPlayerPresets",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"name" : "firstPreset",
+				"data" : 				{
+					"clickColour" : [ 1.0 ],
+					"feedbackLevel" : [ 0.575 ],
+					"level" : [  ],
+					"melodyArray" : [ "melody_01.txt" ],
+					"nPartsPerClick" : [ 26 ],
+					"soundPlayerFadeTime" : [ 2500.0 ],
+					"soundSource" : [  ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"name" : "slowMelody",
+				"data" : 				{
+					"clickColour" : [ 4.0 ],
+					"feedbackLevel" : [ 0.595 ],
+					"level" : [ -5.0 ],
+					"melodyArray" : [ "melody_01.txt" ],
+					"nPartsPerClick" : [ 57 ],
+					"soundPlayerFadeTime" : [ 2500.0 ],
+					"soundSource" : [ "trumpetCall_02.L.wav" ]
+				}
+
+			}
+,
+			"3" : 			{
+				"id" : 3,
+				"name" : "slowMelodyDifferentClick",
+				"data" : 				{
+					"clickColour" : [ 3.0 ],
+					"feedbackLevel" : [ 0.99 ],
+					"level" : [ 0.0 ],
+					"melodyArray" : [ "melody_01.txt" ],
+					"nPartsPerClick" : [ 57 ],
+					"soundPlayerFadeTime" : [ 2500.0 ],
+					"soundSource" : [ "trumpetCall_02.L.wav" ]
+				}
+
+			}
+,
+			"4" : 			{
+				"id" : 4,
+				"name" : "slowSynthSequence",
+				"data" : 				{
+					"clickColour" : [ 3.0 ],
+					"feedbackLevel" : [ 0.85 ],
+					"level" : [ -1.0 ],
+					"melodyArray" : [ "melody_01.txt" ],
+					"nPartsPerClick" : [ 16 ],
+					"soundPlayerFadeTime" : [ 2500.0 ],
+					"soundSource" : [ "slowSynthSequence_01.wav" ]
+				}
+
+			}
+,
+			"5" : 			{
+				"id" : 5,
+				"name" : "creepyMetals",
+				"data" : 				{
+					"clickColour" : [ 6.0 ],
+					"feedbackLevel" : [ 0.55 ],
+					"level" : [ -4.0 ],
+					"melodyArray" : [ "melody_01.txt" ],
+					"nPartsPerClick" : [ 8 ],
+					"soundPlayerFadeTime" : [ 2500.0 ],
+					"soundSource" : [ "Sonikebana_creepyMetallurgy.wav" ]
+				}
+
+			}
+,
+			"6" : 			{
+				"id" : 6,
+				"name" : "trumpetCall",
+				"data" : 				{
+					"clickColour" : [ 1.0 ],
+					"feedbackLevel" : [ 0.99 ],
+					"level" : [ 0.0 ],
+					"melodyArray" : [ "cmajorChord.txt" ],
+					"nPartsPerClick" : [ 26 ],
+					"soundPlayerFadeTime" : [ 1000.0 ],
+					"soundSource" : [ "trumpetCall_02.L.wav" ]
+				}
+
+			}
+,
+			"7" : 			{
+				"id" : 7,
+				"name" : "niceSlowSynthSequence",
+				"data" : 				{
+					"clickColour" : [ 35.0 ],
+					"feedbackLevel" : [ 0.0 ],
+					"level" : [ -10.0 ],
+					"melodyArray" : [ "melody_01.txt" ],
+					"nPartsPerClick" : [ 39 ],
+					"soundPlayerFadeTime" : [ 2500.0 ],
+					"soundSource" : [ "slowSynthSequence_01.wav" ]
+				}
+
+			}
+,
+			"8" : 			{
+				"id" : 8,
+				"name" : "veryGlissy",
+				"data" : 				{
+					"clickColour" : [ 5.0 ],
+					"feedbackLevel" : [ 0.2 ],
+					"level" : [ -2.0 ],
+					"melodyArray" : [ "randomDeepOne.txt" ],
+					"nPartsPerClick" : [ 14 ],
+					"soundPlayerFadeTime" : [ 2452.0 ],
+					"soundSource" : [ "superSlowfrom1bpmto22bpm.wav" ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

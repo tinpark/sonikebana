@@ -1,0 +1,161 @@
+#N canvas 331 166 1074 734 10;
+#X obj 39 99 ike_core_soundDef synths;
+#X obj 39 121 v synths-size;
+#X obj 39 148 expr 48000/$f1;
+#X obj 40 382 phasor~;
+#X obj 40 437 tabread4~ synths;
+#X obj 40 409 *~, f 22;
+#X obj 40 353 * 1;
+#X obj 223 265 t b f;
+#X obj 221 105 / 360;
+#X obj 223 241 expr exp(.057762265 * $f1);
+#X obj 221 85 % 360;
+#X floatatom 221 65 5 0 0 0 - - -;
+#X obj 223 196 i;
+#X obj 222 219 change;
+#X msg 79 202 0;
+#X floatatom 302 140 5 0 0 0 - - -;
+#X floatatom 303 164 5 0 0 0 - - -;
+#X floatatom 290 223 5 0 0 0 - - -;
+#X obj 222 153 * 36;
+#X obj 223 175 - 18;
+#X obj 221 129 abs;
+#X floatatom 331 216 5 0 0 0 - - -;
+#X obj 40 495 dac~;
+#X obj 102 494 array define -k -yrange -12 12 melodyTable;
+#A 0 -9.52 -9.52 -9.44 -9.44 -9.52 -9.6 -9.64 -9.68 -9.68 -9.68 -9.6
+-10.72 -10.72 -10.72 -10.72 -10.76 -10.8 -10.8 -10.88 -10.72 -10.72
+-10.72 -10.72 -1.2 -1.28 -1.28 -1.32 -1.36 -1.36 -1.36 -1.36 -1.36
+-1.44 -11.44 -11.44 -11.44 -11.44 -11.44 -11.36 -11.36 -11.36 -11.36
+-11.36 -2 -2 -2 -2.08 -2.08 -2.08 -2.16 -2.24 -2.24 -2.32 -10.96 -11.04
+-11.04 -11.04 -11.12 -11.12 -11.2 -11.2 -11.2 -11.2 -11.2 -11.2 -11.12
+-11.04 6.16 6.16 6.24 6.24 6.24 6.24 6.24 6.24 -10 -10 -10 -10 -10
+-0.96 -0.96 -0.96 -0.96 -0.96 -0.88 -10.08 3.6 3.68 3.76 -0.24 -0.24
+-0.24 -0.24 7.44 7.36 7.28 7.28 7.12 7.04;
+#X obj 378 333 * 100;
+#X obj 297 393 i;
+#X floatatom 297 414 5 0 0 0 - - -;
+#X obj 297 372 array get melodyTable;
+#X obj 561 207 expr 48000/$f1;
+#X obj 562 441 phasor~;
+#X obj 562 468 *~, f 22;
+#X obj 562 412 * 1;
+#X obj 745 324 t b f;
+#X obj 743 164 / 360;
+#X obj 745 300 expr exp(.057762265 * $f1);
+#X obj 743 144 % 360;
+#X floatatom 744 121 5 0 0 0 - - -;
+#X obj 745 255 i;
+#X obj 744 278 change;
+#X msg 601 261 0;
+#X floatatom 824 199 5 0 0 0 - - -;
+#X floatatom 825 223 5 0 0 0 - - -;
+#X floatatom 812 282 5 0 0 0 - - -;
+#X obj 744 212 * 36;
+#X obj 745 234 - 18;
+#X obj 853 254 expr ($f1 * 40) + 10;
+#X obj 743 188 abs;
+#X floatatom 853 275 5 0 0 0 - - -;
+#X obj 555 555 dac~;
+#X obj 900 392 * 100;
+#X obj 819 452 i;
+#X floatatom 819 473 5 0 0 0 - - -;
+#X obj 562 496 tabread4~ synths2;
+#X obj 561 158 ike_core_soundDef synths2;
+#X obj 561 180 v synths2-size;
+#X obj 621 555 array define -k -yrange -12 12 melodyTable2;
+#A 0 0 0 0 0 0 0 -7.6 -7.6 -7.68 -7.68 -7.6 -7.6 7.2 7.28 7.44 7.48
+7.52 7.56 7.6 -2.72 -2.8 -2.8 -2.8 -2.8 -2.8 -2.8 -2.8 0 0 -3.36 -3.36
+-3.36 -3.36 -3.36 -3.36 -3.44 -3.52 -3.6 -3.68 -3.76 -4.96 -5.76 5.76
+5.76 5.76 5.76 5.8 5.84 5.88 5.92 7.6 7.6 7.44 7.4 7.36 7.28 2.32 2.4
+2.4 2.4 2.4 7.28 0 -3.92 -3.92 -3.92 -4 5.28 5.6 5.76 6.08 6.24 6.48
+6.64 6.72 7.12 3.72 3.68 3.68 8.88 8.88 8.96 8.96 8.96 8.88 8.8 8.64
+8.56 8.48 8.48 8.48 8.48 8.48 -8.48 -8.4 -8.32 -8.32 0 0 0;
+#X obj 819 431 array get melodyTable2;
+#X obj 562 526 *~ 0.3;
+#X obj 40 463 *~ 0.2;
+#X msg 39 18 /Users/mparker/Desktop/sonikebana-synthWork/sonikebana-tyrell-Bnat4.wav
+, f 75;
+#X msg 561 76 /Users/mparker/Desktop/sonikebana-synthWork/sonikebana-tyrell-Bnat4.wav
+, f 75;
+#X obj 177 377 delread4~ cabine;
+#X obj 177 343 line~;
+#X floatatom 177 296 5 0 0 0 - - -;
+#X obj 204 400 *~ 0.9;
+#X obj 331 195 expr ($f1 * 5000) + 9000;
+#X obj 204 444 delwrite~ cabine 15000;
+#X msg 177 319 \$1 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 5 1;
+#X connect 1 0 14 0;
+#X connect 2 0 6 0;
+#X connect 3 0 5 0;
+#X connect 4 0 58 0;
+#X connect 4 0 66 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;
+#X connect 7 0 6 0;
+#X connect 7 1 6 1;
+#X connect 8 0 16 0;
+#X connect 8 0 20 0;
+#X connect 8 0 24 0;
+#X connect 9 0 7 0;
+#X connect 10 0 8 0;
+#X connect 10 0 15 0;
+#X connect 11 0 10 0;
+#X connect 12 0 17 0;
+#X connect 13 0 9 0;
+#X connect 14 0 3 1;
+#X connect 18 0 19 0;
+#X connect 19 0 12 0;
+#X connect 20 0 18 0;
+#X connect 20 0 65 0;
+#X connect 24 0 27 0;
+#X connect 25 0 26 0;
+#X connect 26 0 13 0;
+#X connect 27 0 25 0;
+#X connect 28 0 31 0;
+#X connect 29 0 30 0;
+#X connect 30 0 52 0;
+#X connect 31 0 29 0;
+#X connect 32 0 31 0;
+#X connect 32 1 31 1;
+#X connect 33 0 41 0;
+#X connect 33 0 46 0;
+#X connect 33 0 49 0;
+#X connect 34 0 32 0;
+#X connect 35 0 33 0;
+#X connect 35 0 40 0;
+#X connect 36 0 35 0;
+#X connect 37 0 42 0;
+#X connect 38 0 34 0;
+#X connect 39 0 29 1;
+#X connect 43 0 44 0;
+#X connect 44 0 37 0;
+#X connect 45 0 47 0;
+#X connect 46 0 43 0;
+#X connect 46 0 45 0;
+#X connect 49 0 56 0;
+#X connect 50 0 51 0;
+#X connect 51 0 38 0;
+#X connect 52 0 57 0;
+#X connect 53 0 54 0;
+#X connect 54 0 28 0;
+#X connect 54 0 30 1;
+#X connect 54 0 39 0;
+#X connect 56 0 50 0;
+#X connect 57 0 48 0;
+#X connect 57 0 48 1;
+#X connect 58 0 22 1;
+#X connect 58 0 22 0;
+#X connect 59 0 0 0;
+#X connect 60 0 53 0;
+#X connect 61 0 58 0;
+#X connect 61 0 64 0;
+#X connect 62 0 61 0;
+#X connect 63 0 67 0;
+#X connect 64 0 66 0;
+#X connect 65 0 21 0;
+#X connect 65 0 63 0;
+#X connect 67 0 62 0;
