@@ -14,10 +14,14 @@ sudo raspi-config nonint do_hostname $rpiName
 # set the password of the pi
 echo \"$SUDO_USER:$rpiPWD\" | chpasswd
 
-# set the IP address to send messages to and from PD
+# fix netatalk, the following doesn't seem to work.
+# sudo echo "[Homes] basedir regex = /home" >> /etc/netatalk/afp.conf
+
+
 
 # get the mac address of the machine.
 ifconfig >> ~/Desktop/macAddress_$rpiName.txt
+
 
 # update the firmware of the machine
 cd ~/Downloads

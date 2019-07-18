@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 35.0, 79.0, 1346.0, 787.0 ],
+		"rect" : [ 64.0, 168.0, 1346.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"showontab" : 1,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-50",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 363.5, 151.0, 361.0, 22.0 ],
+					"text" : "/0 compass 19.5 1.5 9.8125 -0.02 0.04 0.13 1. 3. 0. 0. 29."
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial Rounded MT Bold",
 					"fontsize" : 13.0,
@@ -1304,6 +1316,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-33", 0 ],
+					"order" : 0,
+					"source" : [ "obj-34", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-50", 1 ],
+					"order" : 1,
 					"source" : [ "obj-34", 1 ]
 				}
 

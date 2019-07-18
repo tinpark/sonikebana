@@ -5,6 +5,7 @@ In order to have a layer of confidence that both PD and the python script are wo
 
 If the throttle is set to very fast speed (low number of ms) it should be possible to record the sensor data and play back how the installation was performing at any particular point in time, useful perhaps for documentation purposes.
 
+
 IP ADDRESSES
 
 name  IP ADDRESS  MacAddress
@@ -18,7 +19,7 @@ Pi five - 192.168.1.105 -
 Pi six - 192.168.1.106 -
 Pi seven - 192.168.1.107 -
 Pi eight - 192.168.1.108 -
-Pi nine - 192.168.1.109 - 
+Pi nine - 192.168.1.109 -
 
 Login credentials are same for all machines
 pi@IPADDRESS, pw sonik3bana
