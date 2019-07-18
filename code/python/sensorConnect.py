@@ -115,6 +115,7 @@ while True:
     sys, gyro, accel, mag = bno.get_calibration_status()
     temp_c = bno.read_temp()
     send_readings_to_pd(heading, roll, pitch, x_acc, y_acc, z_acc, sys, gyro, accel, mag, temp_c)
+    print (heading)
 
     # Wait .075 seconds and repeat.
     time.sleep(0.075)

@@ -23,11 +23,10 @@ i2c-tools
 # git clone https://github.com/adafruit/Adafruit_Python_BNO055
 # cd Adafruit_Python_BNO055
 # sudo pip setup.py install
-# sudo pip3 install Adafruit-BNO055
-git clone https://github.com/adafruit/Adafruit_Python_BNO055
-cd Adafruit_Python_BNO055
-sudo python setup.py install
-cd ..
+# cd ..
+sudo pip install Adafruit-BNO055
+sudo pip3 install Adafruit-BNO055
+
 
 # ------------------------------------------------------------
 # install adafruit compass LSM303 as a backup library for the LSM303 in case the BNO055 fails and you're in a hurry to get another sensor in
@@ -37,7 +36,7 @@ cd ..
 
 # ----------------------------------
 # copy across working config.txt includes setting UART to 1 and baud speed, pluys audio card settings.
-sudo cp code/raspi/config.txt /boot/
+sudo cp ~/sonikebana/code/raspi/config.txt /boot/
 # -----------------------------------
 # sort out UART services so that the sensor works
 sudo systemctl stop serial-getty@ttyS0.service

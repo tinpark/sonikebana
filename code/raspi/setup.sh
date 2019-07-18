@@ -81,7 +81,7 @@ curl -L https://www.dropbox.com/sh/kx25ck58qkgg04w/AACbMp4nF8VnTctwn9K_g6-7a?dl=
 unzip ~/Desktop/sonikebanaSound.zip
 rm sonikebanaSound.zip
 
-
 # ------------------------------------
 # reboot the machine
 sudo reboot
+ 
