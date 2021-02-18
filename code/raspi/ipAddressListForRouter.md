@@ -22,4 +22,4 @@ Pi eight - 192.168.1.108 -
 Pi nine - 192.168.1.109 -
 
 Login credentials are same for all machines
-pi@IPADDRESS, pw sonik3bana
+pi@IPADDRESS, pw *********
